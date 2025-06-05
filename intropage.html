@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ORDINARY</title>
+    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <style>
+         body {
+      margin: 0;
+      height: 505vh;
+      display: flex;
+      justify-content:right; 
+      align-items: center;     
+      background-color: #120d0d;
+    }
+        .card{
+            width: 300px;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-image: url("3bce0fe0-73be-4b3c-8c36-d0a71eecb895.jpg");
+            border-radius: 10px;
+            box-shadow:0 4px 8px rgba(90, 85, 85, 0.2);
+            overflow: hidden;
+            color: rgb(93, 89, 89);
+            position: absolute;
+            top: 180px;    
+            left: 1050px; 
+            background-color: rgb(201, 196, 196);
+        }
+        .card-content {
+            position:fixed;
+            bottom: 100px;
+            background: rgba(0,0,0,0); 
+            width: 100%;
+            padding: 10px;
+            color: aliceblue;
+        }
+        .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(80, 77, 77, 0.3);
+      box-shadow: rgb(68, 8, 199);
+        }   
+       
+    </style>
+    <body style="background-image: url('Untitled\ Project.jpg');">
+        <div class="card"><center>
+            <div class="card-content">
+              <form onsubmit="return validateForm()"> 
+            <input type="text" id="userid"  name="userid" placeholder="Email or User ID" required><br><br>
+            <input type="password" id="password" name="password" placeholder="password" required><br><br> 
+     <button type="submit" class="btn btn-primary">Login</button>
+    <br> <a href="Registration.html">Register</a>   
+  </form>  
+  <script>
+    function validateForm() {
+  const userId = document.getElementById("userid").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (userId === "" || userId.length < 4) {
+    alert("User ID must be at least 4 characters.");
+    return false;
+  }
+
+  if (password === "" || password.length < 6) {
+    alert("Password must be at least 6 characters.");
+    return false;
+  }
+
+  // Success
+  alert("Login successful!");
+  window.location.href = "project firstpage.html"; // Redirect to your page
+  return false; // Prevent default form submission
+}
+
+  </script>
+</div></center>
+        </div>
+    </body>
+</html>
